@@ -1,0 +1,63 @@
+### Get the service document from the Endpoint
+
+POST http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC28052/Add_GrossAmount
+Content-Type: application/json
+
+{}
+
+
+### Get the metadata
+
+http://localhost:4004/odata/v4/CatalogService/$metadata
+
+### Get the employee data - Contains example
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=Contains(nameLast,'F')
+
+### Get the employee data - Filter example
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=nameLast eq 'Fall'
+
+
+### Get the employee data - Top
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=10
+
+
+### Get the employee data - Top & Skip
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=10&$skip=10
+
+
+### Get the employee data - Select
+GET http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$select=nameFirst,nameMiddle,nameLast,sex
+
+### Get single employee information
+
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C197A7FB
+
+
+### Get purchase order information
+
+http://localhost:4004/odata/v4/CatalogService/POs
+
+### Get purchase order information
+
+http://localhost:4004/odata/v4/CatalogService/POs('74867AD200E41EDBA5D8B0C98DC28052')
+
+
+### POST Request
+
+POST http://localhost:4004/odata/v4/CatalogService/POs('74867AD200E41EDBA5D8B0C98DC28052')/CatalogService.Add_NetAmount
+Content-Type: application/json
+
+{}
+
+###
+
+POST http://localhost:4004/odata/v4/SuryaService/basicCap HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Ram"
+}
